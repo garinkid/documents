@@ -1,0 +1,98 @@
+\documentclass[portrait, a1paper]{baposter}
+
+\definecolor{light-blue}{rgb}{0, 0.85, 1}
+\definecolor{dark-blue}{rgb}{0, 0.45 , 0.75}
+\definecolor{white}{rgb}{1, 1, 1}
+
+
+\begin{document}
+	\begin{poster}
+	%poster option
+	{
+		%headershade=shade,
+		headerColorOne=dark-blue,
+		headerColorTwo=white,
+		headerFontColor=white,
+		headerfont=\bf,
+		headerborder=open,
+		headershape=rectangle,
+		borderColor=light-blue,
+		background=plain,
+		bgColorOne=white,
+		columns=3,
+		textborder=rectangle,
+		boxColorOne=white, % Background color of the content boxes
+	}
+	%eye catcher
+	{
+	}
+	%Title
+	{
+	\LARGE{Modelica Model for the youBot Manipulator}
+	}
+	%Author
+	{
+	\large{Rhama Dwiputra, }
+	}
+	
+	\headerbox{Background}{name=background, column=0, row=0}{
+		Models and simulation tools are crucial in robotic research.
+		The youBot is a mobile manipulator designed to serve as the reference platform for industry, research and education.
+		Due to its frequent use as a test subject for educational purpose or investigation of new methods in research institute, a model of the youBot is highly advantageous.  
+	}
+	
+	\headerbox{Result and Evaluation}{name=resultandevaluation, column=0, below=background, span=3}{
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	}
+	
+	\headerbox{Approach}{name=Approach, column=1, row=0, span=2}{
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	}
+	
+	\headerbox{Future Work}{name=FutureWork, column=0, below=resultandevaluation, span=3}{
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	}
+	
+	
+	\headerbox{Acknowledgement}{name=Acknowledgement, column=0, below=FutureWork}{
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	}
+	
+	\headerbox{Reference}{name=Reference, column=1, below=FutureWork, span=2}{
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	}
+		
+		
+		
+	\end{poster}
+\end{document}
