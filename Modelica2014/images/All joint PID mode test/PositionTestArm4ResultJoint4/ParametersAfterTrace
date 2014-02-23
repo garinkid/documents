@@ -1,0 +1,69 @@
+Name: PositionTestArm4ResultJoint4
+Date: 2012-Sep-01 12:32:13
+JointName: arm_joint_4
+TorqueConstant: 0.051
+JointLimits: lower Limit: -155000 upper Limit: -1000
+EncoderTicksPerRound: 4000
+GearRatio: 0.0140845
+InverseMovementDirection: 1
+ActualMotorVoltage: 31.71 m^2 kg s^-3 A^-1
+I2tSum: 393
+PositionError: 0 rad
+PositionErrorSum: 0 rad
+RampGeneratorSpeed: 0 s^-1 rad
+VelocityError: 0 s^-1 rad
+VelocityErrorSum: 1.0118 s^-1 rad
+DParameterFirstParametersPositionControl: 0
+DParameterFirstParametersSpeedControl: 0
+DParameterSecondParametersCurrentControl: 0
+DParameterSecondParametersPositionControl: 0
+DParameterSecondParametersSpeedControl: 0
+IClippingParameterFirstParametersPositionControl: 500
+IClippingParameterFirstParametersSpeedControl: 500
+IClippingParameterSecondParametersCurrentControl: 1000
+IClippingParameterSecondParametersPositionControl: 1000
+IClippingParameterSecondParametersSpeedControl: 1000
+IParameterFirstParametersPositionControl: 0
+IParameterFirstParametersSpeedControl: 200
+IParameterSecondParametersCurrentControl: 3000
+IParameterSecondParametersPositionControl: 0
+IParameterSecondParametersSpeedControl: 2000
+MaximumPositioningVelocity: 5.8997 s^-1 rad
+MotorAcceleration: 2.94985 s^-2 rad
+PositionControlSwitchingThreshold: 0 s^-1 rad
+PParameterFirstParametersPositionControl: 200
+PParameterFirstParametersSpeedControl: 200
+PParameterSecondParametersCurrentControl: 3000
+PParameterSecondParametersPositionControl: 200
+PParameterSecondParametersSpeedControl: 1000
+RampGeneratorSpeedAndPositionControl: 1
+SpeedControlSwitchingThreshold: 0 s^-1 rad
+ActivateOvervoltageProtection: 1
+ActualCommutationOffset: 0
+BEMFConstant: 0
+CommutationMode: 7
+CommutationMotorCurrent: 3 A
+CurrentControlLoopDelay: 5e-05 s
+EncoderResolution: 4000
+EncoderStopSwitch: 0
+HallSensorPolarityReversal: 1
+I2tExceedCounter: 3
+I2tLimit: 25540
+InitializationMode: 1
+InitSineDelay: 1 s
+MassInertiaConstant: 0
+MaximumMotorCurrent: 2.746 A
+MaximumVelocityToSetPosition: 0.737463 s^-1 rad
+MotorCoilResistance: 0.978 m^2 kg s^-3 A^-2
+MotorControllerTimeout: 0.1 s
+MotorPoles: 16
+OperationalTime: 122700 s
+PIDControlTime: 0.001 s
+PositionTargetReachedDistance: 5
+ReversingEncoderDirection: 1
+SetEncoderCounterZeroAtNextNChannel: 0
+SetEncoderCounterZeroAtNextSwitch: 0
+SetEncoderCounterZeroOnlyOnce: 0
+SineInitializationVelocity: -200
+StopSwitchPolarity: 0
+ThermalWindingTimeConstant: 13.2 s

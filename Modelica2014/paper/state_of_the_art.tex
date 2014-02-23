@@ -1,0 +1,16 @@
+\section{State of The Art}
+\label{sec:state_of_the_art}
+
+Modelica has been used for modeling spider robotic arm \cite{Ferreti2003}, 6-axis industrial robots \cite{Thuemmel2001, Kazi2002, Hast2009}, 3 DOFs parallel Gantry-Tau robot \cite{Dressler2009}, 5 DOFs manipulator \cite{Chen2009} and mobile platforms \cite{Akesson2009, Pohlmann2012}.
+In most cases, a robot model in Modelica is used for investigating the  manipulator's motion control especially in the domain of optimization and system dynamics.
+Such research requires the repetition of motions and adjustments to the controller which can have damaging effect when being executed on a real robot.
+
+\cite{Kazi2002} performed optimization through iteration to find a compromise between acceleration, velocity and energy consumption and \cite{Hast2009} solved the minimum time optimization problem for an industrial robot.
+\cite{Thuemmel2001} derives the inverse dynamic model of a manipulator using algorithms for differential-algebraic equation available in the Dymola\footnote{\href{http://www.3ds.com/products-services/catia/portfolio/dymola}{www.3ds.com/products-services/catia/portfolio/dymola}} software. 
+Dymola was also used in \cite{Chen2009} to design a picking manipulator for agriculture purposes.
+\cite{Dressler2009} develops method for kinematic calibration with the Modelica model of parallel Gantry-Tau robot.
+Aside in the field of motion control, Modelica robot models have also been used for tele-manipulation \cite{Ferreti2003}, robot communication \cite{Pohlmann2012} and teaching tools \cite{Akesson2009}.
+
+As shown from the work presented in this section, there is a wide range of research with robot models in Modelica.
+The Modelica model of the youBot manipulator will enable such research to be performed.
+Since the youBot is designed to be the reference platform for academic institute, a Modelica model of the youBot manipulator is of high importance.

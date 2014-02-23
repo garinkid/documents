@@ -1,0 +1,209 @@
+\section{The \emph{youBot} Modelica Library}
+\label{sec:the_modelica_package_youbot}
+The Modelica library for the youBot manipulator in this paper is developed with Dymola.
+The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
+This approach enables components exchange and component-based experiment.
+Additionally, a template model is provided for components which are frequently used in the manipulator model.
+In such cases, the model has adjustable parameter sets to be configured based on its implementation.
+Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
+The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+%Through inheritance, the selected parameter sets of the component in the lower level can be configured from the upper level.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[height=2.4 cm]{\imagedirectory{AbstractionLayer}}
+	\caption{Abstraction layer in a manipulator model}
+	\label{fig:abstraction-layers}
+\end{figure}
+
+In every modeling process, using estimated values and approximation is unavoidable mainly due to the following reasons:
+\begin{itemize}
+%\item \emph{Computational load}. 
+%The computational load of a model is proportional to the model's complexity. 
+%Complex component can be approximated with a simple model under the condition that the model accuracy is consistent.
+\item \emph{Limited knowledge}. 
+Many parameter set of a dynamic system are estimated through system identification (friction, inertia tensor).
+\item \emph{Restricted information}. 
+Many manufactures do not provide complete information about their product.
+\end{itemize}
+The use of estimated values and approximation is presented in the description of each package.
+The youBot Modelica library consists of four packages which are:
+\begin{itemize} 
+	\item \emph{Controller} package, 
+	\item \emph{Axis} package, 
+	\item \emph{Body} package and 
+	\item \emph{System} package.
+\end{itemize}
+The library is developed with the use of several packages in MSL such as Modelica.Blocks.Math for standard mathematical functions and Modelica.Mechanics for 3-dimensional mechanical systems.
+This paper follows the Modelica convention in describing the models.
+Model's name or package's name begins with capital letter.
+When necessary, the model includes its package name. 
+The model $Modelica.Blocks.Interfaces.RealInput$ refers to the model \emph{RealInput} which is inside the package \emph{Interfaces}. 
+The Interfaces package is inside the \emph{Blocks} package and the $Blocks$ package is inside the MSL.
+An instance of a model is written in lower case aside from a few exceptional cases (e.g. \emph{V} is used for voltage to differentiate from \emph{v} for velocity).
+\subsection{\emph{Controller} Package}
+\label{ssec:controller_package}
+The $Controller$ package consists of the components for the manipulator control system.
+The $Controller$ package is divided into three packages which are the \emph{Components} package, the \emph{PIDs} package and the \emph{Modes} package.
+The $Controller.Components$ package consists of models which are in the lowest level of abstraction layer.
+Figure \ref{fig:model-components} show the models in the \emph{Controller.Component} package. 
+\begin{figure}[htb]
+	\vspace{0.2cm}
+	\begin{subfigure}[htb]{0.11\textwidth}
+	\centering
+	\includegraphics[height=1.6cm]{\imagedirectory{limiter2.png}}
+	\caption{$Limiter2$}
+	\label{fig:limiter2}
+	\end{subfigure}
+	\begin{subfigure}[htb]{0.11\textwidth}
+	\centering
+	\includegraphics[height=1.6cm]{\imagedirectory{gain2.png}}
+	\caption{$Gain2$}
+	\label{fig:gain2}
+	\end{subfigure}
+	\begin{subfigure}[htb]{0.11\textwidth}
+	\centering
+	\includegraphics[height=1.6cm]{\imagedirectory{DisDer.png}}
+	\caption{$DisDer$}
+	\label{fig:disder}
+	\end{subfigure}
+	\begin{subfigure}[htb]{0.11\textwidth}
+	\centering
+	\includegraphics[height=1.6cm]{\imagedirectory{p2v.png}}
+	\caption{$P2V$}
+	\label{fig:p2v}
+	\end{subfigure}
+	\caption{The $Controller.Component$ models}
+	\label{fig:model-components}
+\end{figure}
+
+Following the Modelica convention, the instance's name of a model is placed on the upper part of the symbols in blue color.
+The model \emph{Limiter2} and \emph{Gain2} (Figure \ref{fig:gain2} and \ref{fig:limiter2}) perform the calculation for non-linear PID controller (Equation \ref{eq:gain2-2}).
+The model \emph{DisDer} (Figure \ref{fig:disder}) produces the derivative value of a specific time period from a discretized continuous input. The model \emph{P2V} (Figure \ref{fig:p2v}) converts PWM rate to voltage rate. The \emph{P2V} model is an approximation of the SVPWM component in the controller.
+
+The \emph{Controller.PIDs} package consists of three different PID models which are the \emph{Position}, \emph{Velocity} and the \emph{Current} model. As the name suggests, the models are the PID controllers for position, velocity and current in the youBot manipulator (Figure \ref{fig:controller-overview}). 
+As a representative, Figure \ref{fig:velocity-PID-modelica-model} shows the $PIDs.Velocity$ model.
+\begin{figure}[htb]
+	\includegraphics[width=8cm]{\imagedirectory{VelocityPID}}
+	\caption{$PIDs.Velocity$}
+	\label{fig:velocity-PID-modelica-model}
+\end{figure}
+
+Where $v\_set$, $v\_actual$ and $i\_set$ represent $v_{set}$, $v_{actual}$ and $i_{set}$ in Figure \ref{fig:velocity-PID-controller} respectively. 
+The additional component $N$ in the model produces the output in mA to mimic the readings of the actual system.
+
+Finally, the $Controller.Modes$ package is for different types of control mode. 
+Currently, the available model in the $Modes$ package is the \emph{Position} model.
+Figure \ref{fig:position-mode-modelica-model} shows the $Modes.Position$ model.
+\begin{figure}[htb]
+	\includegraphics[width=8cm]{\imagedirectory{PositionMode}}
+	\caption{ $Modes.Position$ }
+	\label{fig:position-mode-modelica-model}	
+\end{figure}
+
+The $Modes.Position$ model consist of all three PID models from the $Controller.PIDs$ package.
+$V\_set$ represent the voltage value which will be connected to the motor's power supply unit.
+Using the same approach, the model for other control mode explained in Section \ref{ssec:control-system} can also be developed.
+
+\subsection{\emph{Axis} Package}
+\label{ssec:axis_package}
+The $Axis$ package consists of the model for joint actuator (motor and control system).
+The package is named \emph{Axis} because the model will be connected to the rotating axis of the manipulator's joints. 
+The $Axis$ package consists of the \emph{Position} model shown in Figure \ref{fig:position-axis-modelica-model}.
+\begin{figure}[htb]
+	\includegraphics[width=8.3cm]{\imagedirectory{PositionAxis}}
+	\vspace{0.2mm}
+	\caption{$Axis.Position$}
+	\label{fig:position-axis-modelica-model}
+\end{figure}
+
+Where $DCPM$ represents the brushless DC motor model, $PSU$ represents the power supply unit model, $R$ represents the gearbox model, $F$ represents the friction model, $controller$ is the $Modes.Position$ model (Figure \ref{fig:position-mode-modelica-model}), $sens\_v$ represent the joint's velocity sensor, $sens\_theta$ represent the joint's position sensor and $joint$ is the connector to the manipulator's joint model.
+The $controller$ output ($V\_set$ in Figure \ref{fig:position-mode-modelica-model}) is connected to $PSU$ and its input is extended for the model input as $theta\_set$.
+The output of $sens\_v$, $sens\_theta$ and the value of \emph{DCPM}'s current is connected to the control system ($theta\_actual$, $v\_actual$ and $i\_actual$ in Figure \ref{fig:position-mode-modelica-model}).
+Aside from the controller, the component in \emph{Modes.Position} are from MSL.
+
+\subsection{\emph{Body} package}
+\label{ssec:body_package}
+
+The $Body$ package consists of models for the rigid body model of the manipulator's kinematic chain.
+The $Body$ package has three models which are \emph{Gripper}, \emph{Link} and \emph{Manipulator}.
+The $Body.Gripper$ model is the rigid body model of the youBot two finger gripper.
+Figure \ref{fig:body-gripper-model} shows the $Body.Gripper$ model.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=8.2cm]{\imagedirectory{gripper}}
+	\vspace{0.2cm}
+	\caption{$Body.Gripper$}
+	\label{fig:body-gripper-model}
+\end{figure}
+
+Where $RF\_rot$ is the gripper's reference frame rotation, $frame\_a$ is the connector to the previous link model, and $gripper$, $left\_finger$ and $right\_finger$  are the rigid body model of the gripper body, left finger and right finger respectively.
+$marker$ is a weightless body model to visualize the path of the manipulator's end effector in simulation and $RF\_vis$ provides the visualization of its reference frame.
+
+The $Body.Link$ model is the rigid body model of a manipulator link.  
+Figure \ref{fig:link-model} shows the $Body.Link$ model.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=7.8cm]{\imagedirectory{Link}}
+	\vspace{0.2mm}
+	\caption{$Body.Link$}
+	\label{fig:link-model}
+\end{figure}
+
+Where $joint$ represent the link's joint which is connected to the actuator model through the connector $motor$, $frame\_b$ is the connector to the next link model and the $body$ represent the rigid body of the link.
+$frame\_a$, $RF\_rot$ and $RF\_vis$ represent the same components as in $Body.Gripper$ model.
+
+The $Body.Manipulator$ model represent the rigid body model of the youBot manipulator's kinematic link.
+Figure \ref{fig:body-manipulator-model} shows the $Body.Manipulator$ model.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=7.5cm]{\imagedirectory{Manipulator}}
+	\caption{$Body.Manipulator$}
+	\label{fig:body-manipulator-model}
+\end{figure}
+
+Where $link1$ represent the first link of the manipulator ($Body.Link$, Figure \ref{fig:link-model}), $gripper$ is the manipulator's gripper model ($Body.Gripper$, Figure \ref{fig:body-gripper-model}), $base$ represent the rigid body of the manipulator's base. The component $base\_pos$ is for defining the manipulator position in the world reference frame. 
+The $Body.Manipulator$ model has five connectors ($axis1$ to $axis5$) for each joint model and one connector ($world\_rf$) for the world reference frame.
+
+
+
+\subsection{\emph{System} package}
+\label{ssec:system_package}
+The $System$ package consists of the manipulator ready-to-use models.
+The $System$ package has two models which are the \emph{Position} model and the \emph{Dummy} model.
+The $System.Position$ model is the rigid body model of youBot manipulator's kinematic chain and its actuators.
+Figure \ref{fig:modelica-model} shows the $System.Position$ model and its visualization in Dymola whereas Figure \ref{fig:parameter-adjustment} shows the parameter set configuration for the velocity controller in the manipulator's fifth joint.
+
+\begin{figure}[htb]
+	\begin{subfigure}[htb]{0.5\textwidth}
+	\includegraphics[width=6.5cm]{\imagedirectory{ManipulatorSystem}}
+	\caption{$System.Position$}
+	\vspace{6mm}
+	\label{fig:system-manipulator-model}
+	\end{subfigure}		
+	\begin{subfigure}[htb]{0.5\textwidth}
+	\centering
+	\includegraphics[width=5.7cm]{\imagedirectory{Manipulator_Vis}}
+	\caption{Model visualization}
+	\label{fig:Manipulator_Vis}
+	\end{subfigure}		
+	\caption{The youBot manipulator model}
+	\label{fig:modelica-model}	
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=8.1cm]{\imagedirectory{axis_5_parameters}}
+	\caption{Parameters configuration}
+	\label{fig:parameter-adjustment}	
+\end{figure}
+
+In Figure \ref{fig:system-manipulator-model}, $KL$ represents the rigid body model of the youBot manipulator's kinematic chain, $theta\_5$ represents the user defined joint angle and $axis\_5$ represents the actuator (Figure \ref{fig:position-axis-modelica-model}) for joint 5.
+The parameter names in Figure \ref{fig:parameter-adjustment} are consistent with the existing driver and firmware.
+The $System.Dummy$ model is the rigid body model of the youBot manipulator (\emph{Body.Manipulator}, Figure \ref{fig:body-manipulator-model}) connected to dummy actuators ($Modelica.Mechanics.Rotational.Speed$).
+The user can set the velocity of each joint directly in the $System.Dummy$ model.
+The $System.Dummy$ model is used for comparison test in Section \ref{sec:result}.
+
+
+
+

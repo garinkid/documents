@@ -1,0 +1,77 @@
+%sample file for Modelica 2011 Conference paper
+
+\documentclass[11pt,a4paper,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{perpage}
+\usepackage{multirow}
+\usepackage{pbox}
+\usepackage{fixfoot}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{verbatim}
+
+\newcommand{\degree}{\ensuremath{^\circ}}
+\MakePerPage{footnote}
+% uncomment according to your operating system:
+% ------------------------------------------------
+\usepackage[latin1]{inputenc}    %% european characters can be used (Windows, old Linux)
+%\usepackage[utf8]{inputenc}     %% european characters can be used (Linux)
+%\usepackage[applemac]{inputenc} %% european characters can be used (Mac OS)
+% ------------------------------------------------
+\usepackage[T1]{fontenc}   %% get hyphenation and accented letters right
+\usepackage{mathptmx}      %% use fitting times fonts also in formulas
+% do not change these lines:
+\pagestyle{empty}                %% no page numbers!
+\usepackage{geometry}            %% please don't change geometry settings!
+\geometry{left=20mm, right=20mm, top=25mm, bottom=25mm, noheadfoot}
+
+\newcommand{\imagedirectory}[1]{../images/{#1}}
+
+% begin the document
+\begin{document}
+\thispagestyle{empty}
+
+\title{\textbf{Modelica Model for the youBot Manipulator}}
+\author{Rhama Dwiputra \quad Alexey Zakharov \quad Roustiam Chakirov \quad Erwin Prassler\\
+Bonn-Rhein-Sieg University of Applied Sciences, Department of Computer Science\\
+Grantham-Allee 20, 53757 Sankt Augustin}
+\date{} % <--- leave date empty
+\maketitle\thispagestyle{empty} %% <-- you need this for the first page
+
+\abstract{
+%Robot model plays an important role in education and research. 
+This paper presents the development of Modelica model for the youBot manipulator.
+Whereas other robotic simulations focus on the robot interaction with its environment, Modelica allows the modeling of the manipulator controllers and motors.
+The model was developed with a Modelica library for the manipulator's components which provides modularity, reusability and abstraction.
+A comparison test with the actual system is performed to ensure the model accuracy.
+The test result shows promising result and provides possible future work.
+The Modelica model of the youBot manipulator is freely available.
+}
+
+\emph{Keywords: Control; Manipulator; Modelica; youBot}
+
+\input{introduction}
+
+\input{state_of_the_art}
+
+\input{manipulator_description}
+
+%\input{library_development}
+
+\input{the_modelica_package_youbot}
+
+\input{result}
+
+\input{conclusion}
+
+
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{ieeetr}
+\bibliography{bibtex}
+
+\input{appendix}
+
+\end{document}

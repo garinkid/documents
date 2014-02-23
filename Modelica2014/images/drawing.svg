@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+   inkscape:export-xdpi="299.95312"
+   inkscape:export-ydpi="299.95312"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="467.36175"
+     inkscape:cy="561.42571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1631"
+     inkscape:window-height="1026"
+     inkscape:window-x="1649"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 370,457.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-3-0-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100,237.36218 10,0 165,0"
+       id="path3814-5-0-3-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/position.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100,302.36218 10,0 165,0"
+       id="path3814-5-0-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/velocity.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.68768191px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 70,437.36218 0,60 160,0 0,0 0,0"
+       id="path3759"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.76564145px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 70,507.36218 0,70 170,0 0,0 0,0"
+       id="path3759-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.15620077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 105,192.36219 0,60 170,0"
+       id="path3759-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/position.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 100,207.36219 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/position.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#00cc00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 105,237.36219 20,-1e-5 c 30,0 100,-30 120,-30 l 30,0"
+       id="path3808"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/position.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.15620077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 105,262.36218 0,55 170,0"
+       id="path3759-0-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/velocity.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 100,282.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/velocity.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#0000f2;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 105,302.36218 20,0 15,-20 85,0 20,20 30,0"
+       id="path3757"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/velocity.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.15620077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 105,327.36219 0,70 170,0"
+       id="path3759-0-5-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100,362.36218 10,0 165,0"
+       id="path3814-5-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 100,342.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 101,382.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-7-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#d00000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 105,362.36218 20,0 0,-20 20,0 0,20 80,0 0,20 20,0 0,-20 c 69.94591,0 112.80877,0 30,0"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/acceleration.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 370,517.36218 10,0 165,0"
+       id="path3814-5-0-3-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.15620077px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 375,442.36218 0,105 170,0"
+       id="path3759-0-5-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 370,502.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#d00000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 375,517.36218 20,0 0,-15 20,0 0,15 80,0 0,15 20,0 0,-15 c 69.94591,0 112.80877,0 30,0"
+       id="path2987-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 370,532.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-7-0-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#b0b0b0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 370,487.36218 c 53.9165,0 119.03457,0 174,0"
+       id="path3814-8-8-0-3-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#0000f2;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 375,517.36218 20,0 20,-30 80,0 20,30 30,0"
+       id="path3757-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+    <path
+       style="fill:none;stroke:#00cc00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 375,517.36219 20,-1e-5 c 30,0 100,-60 120,-60 l 30,0"
+       id="path3808-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/rhama/Dropbox/work/Thesis/images/motion_profile.png"
+       inkscape:export-xdpi="299.95312"
+       inkscape:export-ydpi="299.95312" />
+  </g>
+</svg>
