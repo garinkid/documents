@@ -1,0 +1,75 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 111
+TITLE: Modelica Model for the youBot Manipulator
+AUTHORS: Rhama Dwiputra, Alexey Zakharov, Roustiam Chakirov and Erwin Prassler
+
+OVERALL EVALUATION: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+
+----------- REVIEW -----------
+Language:
+The language used needs an overhaul. This is not only spelling errors but bigger mistakes which makes it hard to parse the content of the paper. Someone with good command of written technical English should do a detailed review of the idioms and phrases used.
+
+References:
+The references and the number of references used in the paper seems suitable. 
+Right now almost all references are gathered in "State of The Art". If possible it would be good to have references distributed throughout the paper.
+
+Library structure & Design:
+The model structure used reminds me a lot of the model "RobotR3" in the Modelica Standard Library. Have ideas from this design been used in the development the youBot library? If so, I'd like to see that mentioned.
+
+It's mentioned in section 3.2 that if the v_input is provided by the user it will be used as v_set instead of the output from the position PID. This mechanism is not described in section 4.1.
+
+In section 4.2 "Axis Package" it is mentioned that some parts are from the Modelica Standard Library, but it seems like a better description would be to say that all parts except for "controller" is from MSL.
+
+In section 4.3 "Body Package", the Body.Gripper model is not described and it doesn't seem to have any other connectors than the MultiBody frame connector. Does this mean that the gripper is not modeled more than to the extent of being a rigid body? If that's so, it should be mentioned and could also be future work.  
+
+Model validation:
+What can be done to get a better fit to measured values?
+ 
+Why hasn't each axis been validated separately?
+
+Has the power consumption been validated?
+
+Library availability:
+It is mentioned that the library is freely available, but the reference is to another paper. I'd rather see a link to a homepage where the library can be downloaded. 
+
+Has the library been tested with any other tools than Dymola (OpenModelica, jModelica, MapleSim, SystemModeler, etc)? And which version of Dymola was used?
+
+Other:
+Future work can be it's own section.
+
+Has the library been used in education yet? A couple of different cases are mentioned in the end, but it's unclear if any of these are in use today or if it's future work.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 111
+TITLE: Modelica Model for the youBot Manipulator
+AUTHORS: Rhama Dwiputra, Alexey Zakharov, Roustiam Chakirov and Erwin Prassler
+
+OVERALL EVALUATION: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+
+----------- REVIEW -----------
+The paper describes the development of MODELICA library for modeling a specific manipulator (the youBot robot from KUKA).
+
+The paper is well understandable and has a clear structure.
+
+Simulation results show the usability of the library: The manipulator model is validated against measurements within reasonable tolerances and deviations are thought to come from the motor submodel. As the the library is created for one single robot one would wish that these deviations are minimized.
+
+As described in the “state of the Art” section of this paper, robot simulation of this kind is not new, so the main advantage of the new library is, that it fits very well for a specific robot that is used as reference platform in the field of robotics.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 111
+TITLE: Modelica Model for the youBot Manipulator
+AUTHORS: Rhama Dwiputra, Alexey Zakharov, Roustiam Chakirov and Erwin Prassler
+
+OVERALL EVALUATION: 0 (borderline paper)
+REVIEWER'S CONFIDENCE: 4 (high)
+
+----------- REVIEW -----------
+The paper describes a simple Modelica model of a 5 dof robot (youbot), and a partial calibration of data with measurements.
+
+The novelty of the paper is questionable: Modeling a robot with rigid links and a simple control system is completely straightforward in Modelica. It is of course difficult to develop the model and calibrate the data with measurements, if only partial information of the construction is available. Still, the quality of the paper is questionable in this respect:
+
+The comparison of simulations with measurements is disastrous. When understanding Figure 13 correctly, the error between measurements and the simulation of some angles are shown (please make this clear in the Figure what is shown). This error is in the order of 0.1 .. 0.2 rad for a joint angle, so between 6 .. 12 degree. This is unbelievable high, and there must be some error in the model. Also, Figure 14(a) shows a qualitatively complete different result for the angular velocity around 3.5 s. So, clearly, either an error, or some important effects are not modeled. Usually, in all drive trains the elasticity/damping of the gearbox is limiting the performance of the system considerably, and therefore need to be always modeled. You should either explain (and verify with simulations), why elasticity in the gears is not modelled, or better, model it.

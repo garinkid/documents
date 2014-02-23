@@ -1,0 +1,84 @@
+%sample file for Modelica 2011 Abstract page
+
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+% uncomment according to your operating system:
+% ------------------------------------------------
+\usepackage[latin1]{inputenc}    %% european characters can be used (Windows, old Linux)
+%\usepackage[utf8]{inputenc}     %% european characters can be used (Linux)
+%\usepackage[applemac]{inputenc} %% european characters can be used (Mac OS)
+% ------------------------------------------------
+\usepackage[T1]{fontenc}   %% get hyphenation and accented letters right
+\usepackage{mathptmx}      %% use fitting times fonts also in formulas
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+% do not change these lines:
+\pagestyle{empty}                %% no page numbers!
+\usepackage[left=35mm, right=35mm, top=15mm, bottom=20mm, noheadfoot]{geometry}
+%% please don't change geometry settings!
+
+\newcommand{\imagedirectory}[1]{../images/{#1}}
+
+% begin the document
+\begin{document}
+\thispagestyle{empty}
+
+\title{\textbf{Modelica Model for the youBot Manipulator}}
+\author{Rhama Dwiputra\footnote{rhama.dwiputra,roustiam.chakirov,erwin.prassler\}@h-brs.de}
+ \quad Alexey Zakharov\footnote{alexey.zhakarov@gmail.com} \quad Roustiam Chakirov\footnotemark[1] \quad Erwin Prassler\footnotemark[1]\\
+Bonn-Rhein-Sieg University of Applied Sciences, Department of Computer Science\\
+Grantham-Allee 20, 53757 Sankt Augustin} 
+\date{} % <--- leave date empty
+\maketitle\thispagestyle{empty} %% <-- you need this for the first page
+
+Models and simulation tools are crucial in robotic research.
+Although there have been major improvements in the electronic and mechanical field, robots are still expensive equipments. 
+The use of models and simulation tools overcome this problem.
+This paper presents the development of the Modelica
+model for the youBot manipulator.
+The youBot is a mobile manipulator designed to
+serve as the reference platform for industry, research and education \cite{Bischoff2011}.
+Therefore, the Modelica model of the youBot manipulator is of high importance.
+The model was developed with a Modelica library for the manipulator's components which provides modularity, reusability and abstraction (Figure \ref{fig:fig1}).
+This approach enables component exchange and component-based experiment of the developed model.
+
+\begin{figure}[htb]
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=5.5cm, angle=0]{\imagedirectory{AbstractionLayer.png}}
+\vspace{0.5cm}
+\caption{Abstraction Layer}
+\label{fig:divide_and_conquer}
+\end{subfigure}		
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=4cm, angle=0]{\imagedirectory{Manipulator_Vis.png}}
+\caption{Visualization}
+\label{fig:youBot_vis}
+\end{subfigure}	
+\caption{The youBot's Manipulator Model}
+\label{fig:fig1}
+\end{figure}
+
+A model is a representation of the actual system and the benefit of having a model only holds true when the model accuracy is known. 
+Simulation can result in wrong conclusion when the researcher forget the limitations and condition under which the simulation is valid \cite{Fritzon2004}.
+Therefore, a comparison test with the actual system is performed to evaluate the model accuracy and identify the major components which require further improvement.
+The test result shows that the model reflects the actual system within a reasonable deviation. 
+For future work, the manipulator model is planned to be to be tested with other Modelica tools (OpenModelica, jModelica) and used for hardware-in-the-loop experiments.
+The development or design of other manipulator models is also possible through the reusability of the components library. 
+The library is publicly available\footnote{\href{http://www.youbot-store.com}{www.youbot-store.com}} to be used for education and research.
+
+
+\begin{thebibliography}{00}
+\addcontentsline{toc}{chapter}{References}
+
+\bibitem{Bischoff2011} R. Bischoff, U. Huggenberger
+, and E. Prassler, \emph{``Kuka youbot - a mobile manipulator for research and education''}, in \emph{IEEE Int. Conf. on Robotics and Automat. (ICRA)}, pp. 1-4, May 2011.
+
+\bibitem{Fritzon2004} P. Fritzson, \emph{Principles of Object-Oriented Modeling and Simulation With Modelica 2.1.} IEEE Press, 2004.
+
+\end{thebibliography}
+
+\end{document}
