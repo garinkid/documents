@@ -4,6 +4,11 @@
 \definecolor{dark-blue}{rgb}{0, 0.45 , 0.75}
 \definecolor{white}{rgb}{1, 1, 1}
 
+\usepackage{wrapfig}
+\usepackage{setspace} 
+\usepackage{relsize}
+\newcommand{\imagedirectory}[1]{../images/{#1}}
+\newcommand{\imagecommon}[1]{../../images/{#1}}
 
 \begin{document}
 	\begin{poster}
@@ -20,76 +25,106 @@
 		background=plain,
 		bgColorOne=white,
 		columns=3,
+		eyecatcher=false,
 		textborder=rectangle,
 		boxColorOne=white, % Background color of the content boxes
 	}
-	%eye catcher
 	{
+    %eye catcher
 	}
 	%Title
 	{
-	\LARGE{Modelica Model for the youBot Manipulator}
+	\Large{Modelica Model for the youBot Manipulator} \vspace{0.1em}
 	}
 	%Author
 	{
-	\large{Rhama Dwiputra, }
+	\small{Rhama Dwiputra$^*$, Alexey Zakharov$^+$, Roustiam Chakirov$^*$, Erwin Prassler$^*$\\
+	\scriptsize{
+$^*${\{rhama.dwiputra, roustiam.chakirov, erwin.prassler\}@h-brs.de}, $^+${alexey.zhakarov@gmail.com}
+		}
+		}
 	}
-	
+	%University Logo
+	{
+	\includegraphics[width=0.25\textwidth]{\imagecommon{logo-hbrs}}
+	}
+
+%---------------------------------------
+% Background
+%---------------------------------------
+
 	\headerbox{Background}{name=background, column=0, row=0}{
 		Models and simulation tools are crucial in robotic research.
-		The youBot is a mobile manipulator designed to serve as the reference platform for industry, research and education.
+		The \emph{youBot} is a mobile manipulator designed to serve as the reference platform for industry, research and education \cite{Bischoff2011}.
 		Due to its frequent use as a test subject for educational purpose or investigation of new methods in research institute, a model of the youBot is highly advantageous.  
 	}
-	
+
+%---------------------------------------
+% Result and Evaluation
+%---------------------------------------
+
 	\headerbox{Result and Evaluation}{name=resultandevaluation, column=0, below=background, span=3}{
-The Modelica library for the youBot manipulator in this paper is developed with Dymola.
-The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
-This approach enables components exchange and component-based experiment.
-Additionally, a template model is provided for components which are frequently used in the manipulator model.
-In such cases, the model has adjustable parameter sets to be configured based on its implementation.
-Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
-The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+The youBot Modelica library consists of: 1. the \emph{Controller} package 2. the \emph{Axis} package 3. the \emph{Body} package and 4. the \emph{System} package. \\
+	\includegraphics[width=0.5\textwidth]{\imagedirectory{youbot_arm_model_overview}}
+	
 	}
+
+%---------------------------------------
+% Approach
+%---------------------------------------
 	
 	\headerbox{Approach}{name=Approach, column=1, row=0, span=2}{
-The Modelica library for the youBot manipulator in this paper is developed with Dymola.
-The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
-This approach enables components exchange and component-based experiment.
-Additionally, a template model is provided for components which are frequently used in the manipulator model.
-In such cases, the model has adjustable parameter sets to be configured based on its implementation.
-Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
-The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
-	}
+
+\begin{wrapfigure}{r}{0.38\textwidth}
+   \begin{center}
+	\includegraphics[width=0.38\textwidth]{\imagedirectory{AbstractionLayer}}
+ \end{center}
+ 	\caption{The manipulator model is developed with a model library for its components.}
+ 	\label{fig:abstraction-layers}
+ \end{wrapfigure}	
 	
+The library is developed using the ``divide and conquer'' principle with emphasize on modularity, and re-usability.
+The approach enables components exchange and component-based experiment.
+Finally, the manipulator model is developed in abstraction layers (Figure \ref{fig:abstraction-layers}) where the lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+
+}
+
+%---------------------------------------
+% Future work
+%---------------------------------------
+
 	\headerbox{Future Work}{name=FutureWork, column=0, below=resultandevaluation, span=3}{
-The Modelica library for the youBot manipulator in this paper is developed with Dymola.
-The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
-This approach enables components exchange and component-based experiment.
-Additionally, a template model is provided for components which are frequently used in the manipulator model.
-In such cases, the model has adjustable parameter sets to be configured based on its implementation.
-Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
-The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+Possible improvements for the developed Modelica library is the development of a more accurate motor model and a more comprehensive evaluation of the manipulator component (controller components, power consumption and dynamic properties of every rigid body model).
+The manipulator model is planned to be tested with other Modelica tools (OpenModelica, jModelica) and used for hardware-in-the-loop experiments.
+
 	}
-	
+
+%---------------------------------------
+% Acknowledgment
+%---------------------------------------	
 	
 	\headerbox{Acknowledgement}{name=Acknowledgement, column=0, below=FutureWork}{
-The Modelica library for the youBot manipulator in this paper is developed with Dymola.
-The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
-This approach enables components exchange and component-based experiment.
-Additionally, a template model is provided for components which are frequently used in the manipulator model.
-In such cases, the model has adjustable parameter sets to be configured based on its implementation.
-Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
-The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+We gratefully acknowledge the continued support of the Bonn-Rhein-Sieg University of Applied Sciences for the help and support in this project. 
 	}
+
+%---------------------------------------
+% Reference
+%---------------------------------------	
 	
 	\headerbox{Reference}{name=Reference, column=1, below=FutureWork, span=2}{
-The Modelica library for the youBot manipulator in this paper is developed with Dymola.
-The library is developed using a ``divide and conquer'' principle with emphasize on modularity, re-usability and abstraction.
-This approach enables components exchange and component-based experiment.
-Additionally, a template model is provided for components which are frequently used in the manipulator model.
-In such cases, the model has adjustable parameter sets to be configured based on its implementation.
-Finally, the manipulator model is developed in different abstraction layers (Figure \ref{fig:abstraction-layers}).
-The lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
+	\smaller{
+\vspace{-0.4em} 										% Save some space at the beginning
+\bibliographystyle{plain}							% Use plain style
+\renewcommand{\section}[2]{\vskip 0.05em}		% Omit "References" title
+
+\begin{thebibliography}{1}							% Simple bibliography with widest label of 1
+\itemsep=-0.01em										% Save space between the separation
+\setlength{\baselineskip}{0.4em}					% Save space with longer lines
+\bibitem{Bischoff2011} R. Bischoff, U. Huggenberger, and E. Prassler, \emph{``Kuka youbot - a mobile manipulator for research and education''}, in \emph{IEEE Int. Conf. on Robotics and Automat. (ICRA)}, pp. 1-4, May 2011.
+\bibitem{Fritzon2004} P. Fritzson, \emph{Principles of Object-Oriented Modeling and Simulation With Modelica 2.1.} IEEE Press, 2004.
+\end{thebibliography}
+
+	}
 	}
 		
 		
