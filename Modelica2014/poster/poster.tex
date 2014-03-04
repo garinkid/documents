@@ -4,13 +4,27 @@
 \definecolor{dark-blue}{rgb}{0, 0.45 , 0.75}
 \definecolor{white}{rgb}{1, 1, 1}
 
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{float}
 \usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{setspace} 
 \usepackage{relsize}
 \newcommand{\imagedirectory}[1]{../images/{#1}}
 \newcommand{\imagecommon}[1]{../../images/{#1}}
 
 \begin{document}
+
+%%% Setting Background Image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\background{
+	\begin{tikzpicture}[remember picture,overlay]%
+	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+	{\includegraphics[height=1.1\textheight]{background}};
+	\end{tikzpicture}
+}
+
 	\begin{poster}
 	%poster option
 	{
@@ -22,12 +36,13 @@
 		headerborder=open,
 		headershape=rectangle,
 		borderColor=light-blue,
-		background=plain,
-		bgColorOne=white,
+		background=user,
+		%bgColorOne=white,
 		columns=3,
 		eyecatcher=false,
 		textborder=rectangle,
-		boxColorOne=white, % Background color of the content boxes
+		boxColorOne=white,
+		 % Background color of the content boxes
 	}
 	{
     %eye catcher
@@ -54,47 +69,64 @@ $^*${\{rhama.dwiputra, roustiam.chakirov, erwin.prassler\}@h-brs.de}, $^+${alexe
 %---------------------------------------
 
 	\headerbox{Background}{name=background, column=0, row=0}{
-		Models and simulation tools are crucial in robotic research.
 		The \emph{youBot} is a mobile manipulator designed to serve as the reference platform for industry, research and education \cite{Bischoff2011}.
-		Due to its frequent use as a test subject for educational purpose or investigation of new methods in research institute, a model of the youBot is highly advantageous.  
+		Due to its frequent use for educational purpose or investigation of new methods, a model of the youBot is highly advantageous.  
 	}
+%---------------------------------------
+% Approach
+%---------------------------------------
+	
+	\headerbox{Approach}{name=Approach, column=1, row=0, span=2}{
+\begin{wrapfigure}{r}{0.44\textwidth}
+   \begin{center}
+   \vspace{-5pt}
+	\includegraphics[width=0.44\textwidth]{\imagedirectory{AbstractionLayer}}\\
+ 	\label{fig:abstraction-layers}
+ 	 \vspace{5pt}
+ 	 \smaller{Component-based development.}
+ 	 \end{center}
+ \end{wrapfigure}	
+	
+The library is developed with emphasize on modularity, and re-usability.
+Additionally, the manipulator model is developed in abstraction layers where the lower layer provides a more detailed information and the upper layer provides the general overview of the system.
+
+}
+
+
 
 %---------------------------------------
 % Result and Evaluation
 %---------------------------------------
 
 	\headerbox{Result and Evaluation}{name=resultandevaluation, column=0, below=background, span=3}{
-The youBot Modelica library consists of: 1. the \emph{Controller} package 2. the \emph{Axis} package 3. the \emph{Body} package and 4. the \emph{System} package. \\
-	\includegraphics[width=0.5\textwidth]{\imagedirectory{youbot_arm_model_overview}}
+\begin{figure}[H]
+   \vspace{-5pt}
+	\begin{subfigure}[b]{0.72\textwidth}
+	\includegraphics[width=1.0\textwidth]{\imagedirectory{overview}}
+	\label{fig:youBot-overview}	
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.24\textwidth}
+	\includegraphics[width=1.0\textwidth]{\imagedirectory{parameters-and-evaluation}}
+	\label{fig:youBot-overview}	
+	\end{subfigure}\\
+	\centering   
+	\smaller{Model overview, parameter configuration and evaluation}
+\end{figure}
+ \vspace{-10pt}
+A model is a representation of the actual system and the benefit of having a model only holds true when the model is accurate \cite{Fritzon2004}.
+the development of the manipulator model is followed by a test with the actual system.
+
+
 	
 	}
-
-%---------------------------------------
-% Approach
-%---------------------------------------
-	
-	\headerbox{Approach}{name=Approach, column=1, row=0, span=2}{
-
-\begin{wrapfigure}{r}{0.38\textwidth}
-   \begin{center}
-	\includegraphics[width=0.38\textwidth]{\imagedirectory{AbstractionLayer}}
- \end{center}
- 	\caption{The manipulator model is developed with a model library for its components.}
- 	\label{fig:abstraction-layers}
- \end{wrapfigure}	
-	
-The library is developed using the ``divide and conquer'' principle with emphasize on modularity, and re-usability.
-The approach enables components exchange and component-based experiment.
-Finally, the manipulator model is developed in abstraction layers (Figure \ref{fig:abstraction-layers}) where the lower layer provides a more detailed information in each component and the upper layer provides the general overview of the system.
-
-}
 
 %---------------------------------------
 % Future work
 %---------------------------------------
 
 	\headerbox{Future Work}{name=FutureWork, column=0, below=resultandevaluation, span=3}{
-Possible improvements for the developed Modelica library is the development of a more accurate motor model and a more comprehensive evaluation of the manipulator component (controller components, power consumption and dynamic properties of every rigid body model).
+Possible improvements for the developed Modelica library is the development of a more accurate motor model and a more comprehensive evaluation of the manipulator component (the controller components, the power consumption and the dynamic properties).
 The manipulator model is planned to be tested with other Modelica tools (OpenModelica, jModelica) and used for hardware-in-the-loop experiments.
 
 	}
@@ -104,7 +136,7 @@ The manipulator model is planned to be tested with other Modelica tools (OpenMod
 %---------------------------------------	
 	
 	\headerbox{Acknowledgement}{name=Acknowledgement, column=0, below=FutureWork}{
-We gratefully acknowledge the continued support of the Bonn-Rhein-Sieg University of Applied Sciences for the help and support in this project. 
+We gratefully acknowledge the continued support of the Bonn-Rhein-Sieg University of Applied Sciences and its academic staffs for the help and support in this project. 
 	}
 
 %---------------------------------------

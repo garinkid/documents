@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="poster_background.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3775">
+      <stop
+         id="stop3783"
+         offset="0"
+         style="stop-color:#c0f2ff;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#52e0ff;stop-opacity:0.24705882;"
+         offset="0.85000002"
+         id="stop3806" />
+      <stop
+         id="stop3808"
+         offset="0.91000003"
+         style="stop-color:#ffffff;stop-opacity:0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3779" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3775"
+       id="linearGradient3781"
+       x1="-3.8571429"
+       y1="522.36218"
+       x2="743.85718"
+       y2="522.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4061621,0,0,0.69439221,-1048.3565,7.27579)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-142.03484"
+     inkscape:cy="425.54317"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1631"
+     inkscape:window-height="1026"
+     inkscape:window-x="1649"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient3781);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.97628735999999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15.81029926000000074, 1.97628741000000008;stroke-dashoffset:0"
+       id="rect3005"
+       width="1048.5951"
+       height="740.02368"
+       x="-1052.374"
+       y="-0.01180834"
+       transform="matrix(0,-1,1,0,0,0)"
+       inkscape:export-filename="/home/rhama/Desktop/git/documents/Modelica2014/poster/background.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600" />
+  </g>
+</svg>
