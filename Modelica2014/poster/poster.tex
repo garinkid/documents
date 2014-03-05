@@ -40,6 +40,9 @@
 		%bgColorOne=white,
 		columns=3,
 		eyecatcher=false,
+		colspacing=6pt,
+		linewidth=1pt,
+		headerheight=0.085\textheight,
 		textborder=rectangle,
 		boxColorOne=white,
 		 % Background color of the content boxes
@@ -69,26 +72,27 @@ $^*${\{rhama.dwiputra, roustiam.chakirov, erwin.prassler\}@h-brs.de}, $^+${alexe
 %---------------------------------------
 
 	\headerbox{Background}{name=background, column=0, row=0}{
-		The \emph{youBot} is a mobile manipulator designed to serve as the reference platform for industry, research and education \cite{Bischoff2011}.
-		Due to its frequent use for educational purpose or investigation of new methods, a model of the youBot is highly advantageous.  
+		The \emph{youBot} is designed to serve as the reference platform for industry, research and education \cite{Bischoff2011}.
+		Due to its frequent use for educational purpose and experiments, a model of the youBot is advantageous.  
 	}
 %---------------------------------------
 % Approach
 %---------------------------------------
 	
 	\headerbox{Approach}{name=Approach, column=1, row=0, span=2}{
-\begin{wrapfigure}{r}{0.44\textwidth}
+\begin{wrapfigure}{r}{0.46\textwidth}
    \begin{center}
    \vspace{-5pt}
-	\includegraphics[width=0.44\textwidth]{\imagedirectory{AbstractionLayer}}\\
+	\includegraphics[width=0.43\textwidth]{\imagedirectory{AbstractionLayer}}\\
  	\label{fig:abstraction-layers}
  	 \vspace{5pt}
  	 \smaller{Component-based development.}
  	 \end{center}
  \end{wrapfigure}	
 	
-The library is developed with emphasize on modularity, and re-usability.
-Additionally, the manipulator model is developed in abstraction layers where the lower layer provides a more detailed information and the upper layer provides the general overview of the system.
+The project emphasize on modularity and re-usability.
+The manipulator model is developed with a library for its components. 
+The model development is followed with a comparison test to observe the model accuracy.
 
 }
 
@@ -100,23 +104,47 @@ Additionally, the manipulator model is developed in abstraction layers where the
 
 	\headerbox{Result and Evaluation}{name=resultandevaluation, column=0, below=background, span=3}{
 \begin{figure}[H]
-   \vspace{-5pt}
+   \vspace{-10pt}
 	\begin{subfigure}[b]{0.72\textwidth}
-	\includegraphics[width=1.0\textwidth]{\imagedirectory{overview}}
+	\centering
+	\includegraphics[width=1\textwidth]{\imagedirectory{overview}}
 	\label{fig:youBot-overview}	
 	\end{subfigure}
 	~
 	\begin{subfigure}[b]{0.24\textwidth}
-	\includegraphics[width=1.0\textwidth]{\imagedirectory{parameters-and-evaluation}}
+	\centering
+	\includegraphics[width=1\textwidth]{\imagedirectory{parameters-and-evaluation}}
 	\label{fig:youBot-overview}	
 	\end{subfigure}\\
 	\centering   
-	\smaller{Model overview, parameter configuration and evaluation}
+	\smaller{Model overview, parameter configuration and comparison test.}
 \end{figure}
  \vspace{-10pt}
-A model is a representation of the actual system and the benefit of having a model only holds true when the model is accurate \cite{Fritzon2004}.
-the development of the manipulator model is followed by a test with the actual system.
+The benefit of having a model only holds true when the model is accurate \cite{Fritzon2004}.
+The result of the comparison test shows that the model reflects the actual system within a reasonable deviation.
 
+\begin{figure}[H]
+   \vspace{-5pt}
+	\begin{subfigure}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{\imagedirectory{EvaluationErrorJointAngles}}
+	\label{fig:youBot-overview}	
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{\imagedirectory{EvaluationJoint3}}
+	\label{fig:EvaluationJoint3}	
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{\imagedirectory{EvaluationJoint5}}
+	\label{fig:youBot-overview}	
+	\end{subfigure}\\
+	\centering  
+	\smaller{Evaluation result}
+\end{figure}
 
 	
 	}
@@ -126,8 +154,8 @@ the development of the manipulator model is followed by a test with the actual s
 %---------------------------------------
 
 	\headerbox{Future Work}{name=FutureWork, column=0, below=resultandevaluation, span=3}{
-Possible improvements for the developed Modelica library is the development of a more accurate motor model and a more comprehensive evaluation of the manipulator component (the controller components, the power consumption and the dynamic properties).
-The manipulator model is planned to be tested with other Modelica tools (OpenModelica, jModelica) and used for hardware-in-the-loop experiments.
+Possible improvements is the development of a more accurate motor model and a more comprehensive evaluation of the manipulator model.
+The manipulator model is planned to be tested with other Modelica tools (e.g., OpenModelica \cite{Fritzon2006}) and used for hardware-in-the-loop experiments.
 
 	}
 
@@ -152,8 +180,9 @@ We gratefully acknowledge the continued support of the Bonn-Rhein-Sieg Universit
 \begin{thebibliography}{1}							% Simple bibliography with widest label of 1
 \itemsep=-0.01em										% Save space between the separation
 \setlength{\baselineskip}{0.4em}					% Save space with longer lines
-\bibitem{Bischoff2011} R. Bischoff, U. Huggenberger, and E. Prassler, \emph{``Kuka youbot - a mobile manipulator for research and education''}, in \emph{IEEE Int. Conf. on Robotics and Automat. (ICRA)}, pp. 1-4, May 2011.
+\bibitem{Bischoff2011} R. Bischoff, U. Huggenberger, and E. Prassler, \emph{Kuka youbot - a mobile manipulator for research and education}, in \emph{IEEE Int. Conf. on Robotics and Automat. (ICRA)}, pp. 1-4, May 2011.
 \bibitem{Fritzon2004} P. Fritzson, \emph{Principles of Object-Oriented Modeling and Simulation With Modelica 2.1.} IEEE Press, 2004.
+\bibitem{Fritzon2006} P. Fritzson et al., \emph{OpenModelica - A Free Open-Source Environment for System Modeling, Simulation, and Teaching} in \emph{IEEE Int. Conf. on Control Appl.}, 2006.
 \end{thebibliography}
 
 	}
